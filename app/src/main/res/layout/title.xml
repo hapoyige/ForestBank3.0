@@ -2,30 +2,77 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#234">
-
-    <Button
-        android:id="@+id/homePageButton"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:id="@+id/tabHomePage"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="首页" />
-    <Button
-        android:id="@+id/investmentButton"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageButton
+            android:id="@+id/imgHomePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:src="@mipmap/home_normal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主页"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/tabBank"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="投资平台"/>
-    <Button
-        android:id="@+id/bankButton"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageButton
+            android:id="@+id/imgForest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:src="@mipmap/forest_normal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="森林银行"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/tabInvestment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="森林银行"/>
-    <Button
-        android:id="@+id/accountButton"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageButton
+            android:id="@+id/imgInvestment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:src="@mipmap/coin_normal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="投资平台"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/tabMe"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:text="我的账户"/>
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageButton
+            android:id="@+id/imgMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:src="@mipmap/me_normal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我"/>
+    </LinearLayout>
 </LinearLayout>

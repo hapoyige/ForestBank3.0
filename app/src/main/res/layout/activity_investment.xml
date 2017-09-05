@@ -3,15 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycle_view"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-    <com.example.oct.forestbank.TitleLayout
-        android:layout_width="match_parent"
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/ptr_frame"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"/>
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    <com.example.oct.forestbank.TitleLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom" />
 </LinearLayout>

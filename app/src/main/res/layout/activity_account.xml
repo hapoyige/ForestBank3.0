@@ -3,30 +3,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <include layout="@layout/user_info" />
-    <TextView
-        android:id="@+id/balance"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="余额:"
-        android:textSize="30dp"/>
-    <TextView
-        android:id="@+id/wallet"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="碳钱包:"
-        android:textSize="30dp"/>
-    <TextView
-        android:id="@+id/carbon_data"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:text="我的碳数据:"
-        android:textSize="30dp"/>
-    <com.example.oct.forestbank.TitleLayout
-        android:layout_width="match_parent"
+    <in.srain.cube.views.ptr.PtrClassicFrameLayout
+        android:id="@+id/ptr_frame"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"/>
+        android:layout_width="match_parent"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_launcher_round"/>
+                <TextView
+                    android:id="@+id/telephone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Telephone Number:1234567890"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="余额:"
+                android:textSize="30dp"/>
+            <TextView
+                android:id="@+id/wallet"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="碳钱包:"
+                android:textSize="30dp"/>
+            <TextView
+                android:id="@+id/carbon_data"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="我的碳数据:"
+                android:textSize="30dp"/>
+        </LinearLayout>
+    </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+    <com.example.oct.forestbank.TitleLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom" />
 </LinearLayout>
