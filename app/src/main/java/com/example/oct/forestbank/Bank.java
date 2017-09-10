@@ -23,11 +23,22 @@ import in.srain.cube.views.ptr.PtrHandler;
 public class Bank extends AppCompatActivity implements View.OnClickListener{
     PtrClassicFrameLayout mMainFrame;//下拉刷新控件
     AlertDialog.Builder builder;//构建弹窗
-    //三个按钮
+    //四个按钮
     private Button depositButton;
     private Button loanButton;
     private Button withdrawButton;
     private Button repayButton;
+
+    //显示在银行页面的文本
+    //存款利率/日
+    private TextView depositInterest;
+    //用户当前存款
+    private TextView balance;
+    //贷款利息
+    private TextView loanInterest;
+    //用户已贷款的数额
+    private TextView loanAmount;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,10 +64,16 @@ public class Bank extends AppCompatActivity implements View.OnClickListener{
      * 初始化view
      */
     private void initView(){
+        //按钮
         depositButton=(Button)findViewById(R.id.deposit_button);
         loanButton=(Button)findViewById(R.id.loan_button);
         withdrawButton=(Button)findViewById(R.id.withdraw_button);
         repayButton=(Button)findViewById(R.id.repay_button);
+        //文本
+        depositInterest=(TextView)findViewById(R.id.deposit_interest);
+        balance=(TextView)findViewById(R.id.balance);
+        loanInterest=(TextView)findViewById(R.id.loan_interest);
+        loanAmount=(TextView)findViewById(R.id.loan_amount);
         //下拉刷新部分
         mMainFrame=(PtrClassicFrameLayout)findViewById(R.id.ptr_frame);
         mMainFrame.setPtrHandler(new PtrHandler(){
@@ -79,7 +96,7 @@ public class Bank extends AppCompatActivity implements View.OnClickListener{
     }
 
     private void refreshDatas(){
-        //TODO:首页的数据,活动启动时也刷新一次
+        //TODO:银行显示的数据(初始化过的那些文本),活动启动时也刷新一次
     }
 
     @Override
@@ -102,6 +119,10 @@ public class Bank extends AppCompatActivity implements View.OnClickListener{
         }
     }
 
+    /**
+     * 显示存款窗口
+     * @param view
+     */
     private void showDepositDialog(View view){
         builder = new AlertDialog.Builder(this);
         View depositDialog=View.inflate(Bank.this,R.layout.deposit_dialog,null);
@@ -135,6 +156,10 @@ public class Bank extends AppCompatActivity implements View.OnClickListener{
         alertDialog.show();
     }
 
+    /**
+     * 显示贷款窗口
+     * @param view
+     */
     private void showLoanDialog(View view){
         builder = new AlertDialog.Builder(this);
         View loanDialog=View.inflate(Bank.this,R.layout.loan_dialog,null);
@@ -167,6 +192,11 @@ public class Bank extends AppCompatActivity implements View.OnClickListener{
         });
         alertDialog.show();
     }
+
+    /**
+     * 显示取款窗口
+     * @param view
+     */
     private void showWithdrawDialog(View view){
         builder = new AlertDialog.Builder(this);
         View withdrawDialog=View.inflate(Bank.this,R.layout.withdraw_dialog,null);
@@ -200,6 +230,11 @@ public class Bank extends AppCompatActivity implements View.OnClickListener{
         alertDialog.show();
 
     }
+
+    /**
+     * 显示还贷款窗口
+     * @param view
+     */
     private void showRepayDialog(View view){
         builder = new AlertDialog.Builder(this);
         View repayDialog=View.inflate(Bank.this,R.layout.repay_dialog,null);
