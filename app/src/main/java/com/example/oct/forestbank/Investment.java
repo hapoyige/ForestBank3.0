@@ -72,7 +72,7 @@ public class Investment extends AppCompatActivity {
         //TODO:首页的数据,活动启动时也刷新一次
     }
     private void initProjects(){
-        //TODO:将所有Project信息添加到projectList
+        //TODO:将所有Project信息添加到projectList 下面的几行只是测试用
         for(int i=0;i<3;i++) {
             ProjectItem projectItem =
                     new ProjectItem("Greener!", R.drawable.tree, ""+i);
