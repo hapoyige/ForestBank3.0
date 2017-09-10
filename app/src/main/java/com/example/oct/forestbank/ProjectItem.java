@@ -6,12 +6,14 @@ package com.example.oct.forestbank;
  * 目前一个项目仅包含一张图和一段文字说明
  */
 
-public class InvestProject {
+public class ProjectItem {
     private String name;
     private int imageId;
-    public InvestProject(String name,int imageId){
+    public String id;
+    public ProjectItem(String name, int imageId,String ID){
         this.name=name;
         this.imageId=imageId;
+        this.id=ID;
     }
     public String getName(){
         return name;

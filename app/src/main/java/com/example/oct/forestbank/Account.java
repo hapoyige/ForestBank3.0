@@ -3,6 +3,7 @@ package com.example.oct.forestbank;
  * 用户主界面
  */
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,10 +21,15 @@ public class Account extends AppCompatActivity {
     private TextView balance;
     private TextView wallet;
     private TextView carbonData;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+        //隐藏默认标签
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar != null)
+            actionBar.hide();
         ImageButton mMe=(ImageButton)findViewById(R.id.imgMe);
         mMe.setImageResource(R.mipmap.me_press);
         initView();
@@ -32,9 +38,6 @@ public class Account extends AppCompatActivity {
      * 初始化view
      */
     private void initView(){
-        balance=(TextView)findViewById(R.id.balance);
-        wallet=(TextView)findViewById(R.id.wallet);
-        carbonData=(TextView)findViewById(R.id.carbon_data);
 
         //下拉刷新部分
         mMainFrame=(PtrClassicFrameLayout)findViewById(R.id.ptr_frame);
@@ -59,8 +62,5 @@ public class Account extends AppCompatActivity {
 
     private void refreshDatas(){
         //TODO:首页的数据,活动启动时也刷新一次
-        balance.setText("余额：0");
-        wallet.setText("碳钱包：0");
-        carbonData.setText("碳数据：0");
     }
 }

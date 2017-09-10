@@ -9,19 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomePage"
+        <activity
+            android:name=".HomePage"
             android:launchMode="singleTask">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Account"
-            android:launchMode="singleTask"/>
-        <activity android:name=".Investment"
-            android:launchMode="singleTask"/>
-        <activity android:name=".Bank"
-            android:launchMode="singleTask"/>
+        <activity
+            android:name=".Account"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Investment"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".Bank"
+            android:launchMode="singleTask" />
+        <activity android:name=".Project"></activity>
     </application>
 
 </manifest>

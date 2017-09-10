@@ -3,6 +3,7 @@ package com.example.oct.forestbank;
  * 投资平台页面
  */
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -21,11 +22,15 @@ import in.srain.cube.views.ptr.PtrHandler;
 public class Investment extends AppCompatActivity {
 
     PtrClassicFrameLayout mMainFrame;//下拉刷新控件
-    private List<InvestProject> projectsList=new ArrayList<>();
+    private List<ProjectItem> projectsList=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_investment);
+        //隐藏默认标签
+        ActionBar actionBar=getSupportActionBar();
+        if(actionBar != null)
+            actionBar.hide();
         ImageButton mInvest=(ImageButton)findViewById(R.id.imgInvestment);
         mInvest.setImageResource(R.mipmap.coin_press);
         initProjects();
@@ -69,9 +74,9 @@ public class Investment extends AppCompatActivity {
     private void initProjects(){
         //TODO:将所有Project信息添加到projectList
         for(int i=0;i<3;i++) {
-            InvestProject investProject =
-                    new InvestProject("Greener!", R.drawable.tree);
-            projectsList.add(investProject);
+            ProjectItem projectItem =
+                    new ProjectItem("Greener!", R.drawable.tree, ""+i);
+            projectsList.add(projectItem);
         }
     }
 }
