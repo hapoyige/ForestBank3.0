@@ -18,10 +18,6 @@ import in.srain.cube.views.ptr.PtrHandler;
 public class Account extends AppCompatActivity {
     PtrClassicFrameLayout mMainFrame;//下拉刷新控件
 
-    private TextView balance;
-    private TextView wallet;
-    private TextView carbonData;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
