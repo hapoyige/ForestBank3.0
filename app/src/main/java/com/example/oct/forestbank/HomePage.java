@@ -19,7 +19,12 @@ public class HomePage extends AppCompatActivity {
     private List<View> mViews = new ArrayList<View>();// 用来存放Tab01-04
     */
     PtrClassicFrameLayout mMainFrame;//下拉刷新控件
+
+    //文本
+    //地区名称
     private TextView cityName;
+    //对应的环境质量指数
+    private TextView environmentIndex;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +45,7 @@ public class HomePage extends AppCompatActivity {
     private void initView(){
 
         cityName=(TextView)findViewById(R.id.city_name);
+        environmentIndex=(TextView)findViewById(R.id.environment_index);
         //下拉刷新部分
         mMainFrame=(PtrClassicFrameLayout)findViewById(R.id.ptr_frame);
         mMainFrame.setPtrHandler(new PtrHandler(){
