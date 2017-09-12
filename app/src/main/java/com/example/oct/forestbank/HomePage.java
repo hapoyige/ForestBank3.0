@@ -28,6 +28,8 @@ public class HomePage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //试启动登录页面
+        LoginPerson.actionStart(getApplicationContext());
         setContentView(R.layout.activity_home_page);
         //隐藏默认标签
         ActionBar actionBar=getSupportActionBar();

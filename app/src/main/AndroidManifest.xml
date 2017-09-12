@@ -27,7 +27,11 @@
         <activity
             android:name=".Bank"
             android:launchMode="singleTask" />
-        <activity android:name=".Project"></activity>
+        <activity android:name=".Project" />
+        <activity android:name=".LoginPerson" />
+        <activity android:name=".RegisterPerson" />
+        <activity android:name=".LoginGroup" />
+        <activity android:name=".RegisterGroup"></activity>
     </application>
 
 </manifest>
