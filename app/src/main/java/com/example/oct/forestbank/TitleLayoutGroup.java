@@ -9,24 +9,17 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-
 /**
- * Created by Oct on 2017/8/22.
- * 个人用户底部的用于页面转换的标签，暂时不用修改
+ * Created by Oct on 2017/9/12.
  */
-
-public class TitleLayout extends LinearLayout implements View.OnClickListener{
+public class TitleLayoutGroup extends LinearLayout implements View.OnClickListener{
 
     private LinearLayout tabHome;
     private LinearLayout tabBank;
     private LinearLayout tabInvest;
     private LinearLayout tabMe;
-    private ImageButton mHome;
-    private ImageButton mBank;
-    private ImageButton mInvest;
-    private ImageButton mMe;
 
-    public TitleLayout(Context context, AttributeSet attrs){
+    public TitleLayoutGroup(Context context, AttributeSet attrs){
         super(context,attrs);
         LayoutInflater.from(context).inflate(R.layout.title,this);
         initView();
@@ -48,11 +41,6 @@ public class TitleLayout extends LinearLayout implements View.OnClickListener{
         tabBank = (LinearLayout) findViewById(R.id.tabBank);
         tabInvest = (LinearLayout) findViewById(R.id.tabInvestment);
         tabMe = (LinearLayout) findViewById(R.id.tabMe);
-
-        mHome = (ImageButton) findViewById(R.id.imgHomePage);
-        mBank = (ImageButton) findViewById(R.id.imgForest);
-        mInvest = (ImageButton) findViewById(R.id.imgInvestment);
-        mMe = (ImageButton) findViewById(R.id.imgMe);
     }
 
     @Override
@@ -79,13 +67,4 @@ public class TitleLayout extends LinearLayout implements View.OnClickListener{
         getContext().startActivity(intent);
     }
 
-    /**
-     * 把所有图片变暗
-     */
-    private void resetImg(){
-        mHome.setImageResource(R.mipmap.home_normal);
-        mInvest.setImageResource(R.mipmap.coin_normal);
-        mBank.setImageResource(R.mipmap.forest_normal);
-        mMe.setImageResource(R.mipmap.me_normal);
-    }
 }
