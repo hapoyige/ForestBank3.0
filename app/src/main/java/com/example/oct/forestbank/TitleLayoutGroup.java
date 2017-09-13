@@ -16,8 +16,10 @@ public class TitleLayoutGroup extends LinearLayout implements View.OnClickListen
 
     private LinearLayout tabHome;
     private LinearLayout tabBank;
-    private LinearLayout tabInvest;
-    private LinearLayout tabMe;
+    private LinearLayout tabPublish;
+    private LinearLayout tabWe;
+    private LinearLayout tabCheck;
+    private LinearLayout tabConverge;
 
     public TitleLayoutGroup(Context context, AttributeSet attrs){
         super(context,attrs);
@@ -29,18 +31,22 @@ public class TitleLayoutGroup extends LinearLayout implements View.OnClickListen
     private void initEvent(){
         tabHome.setOnClickListener(this);
         tabBank.setOnClickListener(this);
-        tabInvest.setOnClickListener(this);
-        tabMe.setOnClickListener(this);
+        tabPublish.setOnClickListener(this);
+        tabCheck.setOnClickListener(this);
+        tabWe.setOnClickListener(this);
+        tabConverge.setOnClickListener(this);
     }
+
     /**
      * 初始化view
      */
     private void initView() {
-
         tabHome = (LinearLayout) findViewById(R.id.tabHomePage);
         tabBank = (LinearLayout) findViewById(R.id.tabBank);
-        tabInvest = (LinearLayout) findViewById(R.id.tabInvestment);
-        tabMe = (LinearLayout) findViewById(R.id.tabMe);
+        tabPublish=(LinearLayout) findViewById(R.id.tabPublish);
+        tabCheck=(LinearLayout) findViewById(R.id.tabCheck);
+        tabWe=(LinearLayout) findViewById(R.id.tabCompany);
+        tabConverge=(LinearLayout) findViewById(R.id.tabConverge);
     }
 
     @Override
@@ -49,7 +55,7 @@ public class TitleLayoutGroup extends LinearLayout implements View.OnClickListen
         Class targetActivity;
         switch(v.getId()){
             case R.id.tabHomePage:
-                targetActivity=HomePage.class;
+                targetActivity=HomePageGroup.class;
                 break;
             case R.id.tabBank:
                 targetActivity=Bank.class;
