@@ -4,9 +4,6 @@
     android:layout_height="match_parent"
     android:background="@color/slateblue"
     android:orientation="vertical">
-    <com.example.oct.forestbank.LoginTitle
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent" />
     <TextView
         android:textColor="@color/black"
         android:textSize="18sp"

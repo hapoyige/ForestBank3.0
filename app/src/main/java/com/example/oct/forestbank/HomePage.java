@@ -1,5 +1,7 @@
 package com.example.oct.forestbank;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -41,6 +43,10 @@ public class HomePage extends AppCompatActivity {
         //initEvent();
     }
 
+    public static void actionStart(Context context){
+        Intent intent=new Intent(context,HomePage.class);
+        context.startActivity(intent);
+    }
     /**
      * 初始化view
      */

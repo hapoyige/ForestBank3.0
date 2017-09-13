@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,8 +66,15 @@ public class RegisterPerson extends AppCompatActivity implements View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.confirm_button:
-                //TODO:注册后数据库增加记录的操作
-                finish();
+                if(isRegisterSuccessful()){
+                    Toast.makeText(getApplicationContext(), "注册成功",
+                            Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),
+                            "注册信息有误", Toast.LENGTH_SHORT).show();
+                }
                 break;
             case R.id.cancel_button:
                 finish();
@@ -74,5 +82,10 @@ public class RegisterPerson extends AppCompatActivity implements View.OnClickLis
             default:
                 break;
         }
+    }
+
+    private boolean isRegisterSuccessful(){
+        //TODO：完成注册操作,返回注册是否成功
+        return true;
     }
 }

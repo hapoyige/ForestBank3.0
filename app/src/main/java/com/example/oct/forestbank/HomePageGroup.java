@@ -1,5 +1,7 @@
 package com.example.oct.forestbank;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -34,6 +36,11 @@ public class HomePageGroup extends AppCompatActivity {
         mHome.setImageResource(R.mipmap.home_press);
         initViews();
         initEvents();
+    }
+
+    public static void actionStart(Context context){
+        Intent intent=new Intent(context,HomePageGroup.class);
+        context.startActivity(intent);
     }
 
     private void initViews() {
