@@ -61,7 +61,7 @@ public class Project extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.project);
+        setContentView(R.layout.activity_project);
         initViews();
         loadData();
         //获取该项目的ID
