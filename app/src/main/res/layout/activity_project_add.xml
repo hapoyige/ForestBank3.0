@@ -26,5 +26,24 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"/>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/set_raise_start_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="设置筹款起始日期"/>
+            <TextView
+                android:id="@+id/raise_start_time"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"/>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
