@@ -59,6 +59,7 @@ public class TitleLayoutGroup extends LinearLayout implements View.OnClickListen
                 ProjectAdd.actionStart(v.getContext());
                 break;
             case R.id.tab_check:
+                CheckProjectGroup.actionStart(v.getContext());
                 break;
             case R.id.tab_company:
                 break;

@@ -88,6 +88,7 @@ public class Project extends AppCompatActivity {
         setContentView(R.layout.activity_project);
         initViews();
         loadData();
+        initEvents();
         //获取该项目的ID
         Intent intent=getIntent();
         id=intent.getStringExtra("id");

@@ -22,23 +22,27 @@
             android:name=".Bank"
             android:launchMode="singleTask" />
         <activity android:name=".Project" />
-        <activity android:name=".LoginPerson"
-            android:launchMode="singleTask"/>
+        <activity
+            android:name=".LoginPerson"
+            android:launchMode="singleTask" />
         <activity android:name=".RegisterPerson" />
-        <activity android:name=".LoginGroup"
-            android:launchMode="singleTask"/>
+        <activity
+            android:name=".LoginGroup"
+            android:launchMode="singleTask" />
         <activity android:name=".RegisterGroup" />
         <activity android:name=".HomePageGroup" />
-        <activity android:name=".InvestmentGroup" />
+        <activity android:name=".CheckProjectGroup" />
         <activity android:name=".ProjectAdd" />
-        <activity android:name=".StartPage" >
+        <activity android:name=".StartPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".PayPassword" />
-        <activity android:name=".BankCard"></activity>
+        <activity android:name=".BankCard" />
+        <activity android:name=".ProjectGroup"></activity>
     </application>
 
 </manifest>

@@ -3,13 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <Button
-        android:id="@+id/publish_project"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:text="发起新项目"/>
     <in.srain.cube.views.ptr.PtrClassicFrameLayout
         android:id="@+id/ptr_frame"
         android:layout_height="wrap_content"
