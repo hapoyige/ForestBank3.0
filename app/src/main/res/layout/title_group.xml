@@ -4,7 +4,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/tabHomePage"
+        android:id="@+id/tab_home_page"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -25,7 +25,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/tabPublish"
+        android:id="@+id/tab_publish"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -42,7 +42,7 @@
             android:text="发布项目"/>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/tabCheck"
+        android:id="@+id/tab_check"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -59,7 +59,7 @@
             android:text="查看项目"/>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/tabConverge"
+        android:id="@+id/tab_converge"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -76,7 +76,7 @@
             android:text="碳币转换"/>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/tabBank"
+        android:id="@+id/tab_bank"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -94,7 +94,7 @@
             android:text="森林银行"/>
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/tabCompany"
+        android:id="@+id/tab_company"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"

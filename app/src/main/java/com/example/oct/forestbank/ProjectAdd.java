@@ -29,7 +29,7 @@ public class ProjectAdd extends AppCompatActivity
     }
 
     public static void actionStart(Context context){
-        Intent intent=new Intent(context,Project.class);
+        Intent intent=new Intent(context,ProjectAdd.class);
         context.startActivity(intent);
     }
 
@@ -56,12 +56,12 @@ public class ProjectAdd extends AppCompatActivity
     protected Dialog onCreateDialog(int id) {
         switch (id){
             case DATE_DIALOG:
-                return new DatePickerDialog(this, mdateListener, year1,month1,day1);
+                return new DatePickerDialog(this, mdateListener1, year1,month1,day1);
         }
         return null;
     }
 
-    private DatePickerDialog.OnDateSetListener mdateListener =
+    private DatePickerDialog.OnDateSetListener mdateListener1 =
             new DatePickerDialog.OnDateSetListener() {
 
         @Override
