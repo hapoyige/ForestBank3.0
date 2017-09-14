@@ -182,8 +182,26 @@
                 android:layout_height="match_parent"
                 android:text="陈宏俊"/>
         </LinearLayout>
-        <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:textSize="24sp"
+            android:background="@color/mediumspringgreen"
+            android:id="@+id/invest_this_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="投资"/>
+        <Button
+            android:textSize="24sp"
+            android:background="@color/darkgray"
+            android:id="@+id/back_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="返回"/>
+    </LinearLayout>
     </LinearLayout>
 </ScrollView>
